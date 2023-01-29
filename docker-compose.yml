@@ -12,6 +12,7 @@ services:
     ports:
       - 8005:80
 
+#si tienes algun network con db, nginx
 # networks:
 #   default:
 #     name: web_private_red_webapps
