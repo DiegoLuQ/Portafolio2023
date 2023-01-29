@@ -7,9 +7,8 @@ import router from "./router/Router";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  <DatosProvider>
-    <RouterProvider router={router} />
-  </DatosProvider>
-
+    <DatosProvider>
+      <RouterProvider router={router} />
+    </DatosProvider>
   </React.StrictMode>
 );
