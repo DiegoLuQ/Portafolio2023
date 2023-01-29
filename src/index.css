@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --color-primary: #00a675;
+    --color-secondary: #006064;
+}
+
+.menu-item {
+    @apply rounded-lg font-bold px-2 py-2 text-lg text-white hover:bg-[var(--color-primary)] hover:duration-500 hover:ease-in-out hover:rounded-lg 
+    
+}
+
+h3 {
+    @apply font-[Abel] text-[#ffffff] font-bold text-center text-2xl mb-3
+}
+
+h2 {
+    @apply text-2xl font-bold text-[var(--color-primary)]
+}
+h1 {
+    @apply text-4xl font-bold text-[var(--color-primary)]
+}
+body {
+    background: linear-gradient(to right, rgb(29, 31, 36), rgb(17, 24, 39), rgb(0, 0, 0));
+}
+
+@layer base {
+
+    
+
+    .primary {
+        @apply text-[#00a675]
+    }
+    .secondary {
+        @apply text-blue-600
+    }
+
+    .btn-cards {
+        @apply w-full sm:block hover:bg-[#00a675] font-semibold text-white hover:text-white bg-blue-600 px-6 py-2 rounded-md hover:duration-500
+    }
+
+    .btn-form {
+        @apply w-full sm:w-[200px] text-center bg-[#00a675] font-semibold text-white hover:text-white hover:bg-blue-600 px-6 py-2 rounded-md hover:duration-500
+    }
+    .btn-form-red {
+        @apply w-full sm:w-[200px] text-center bg-red-600 font-semibold text-white hover:text-white hover:bg-red-700 px-6 py-2 rounded-md hover:duration-500
+    }
+
+    .p-description {
+        @apply my-4 border rounded-md p-2 text-white
+    }
+}
