@@ -3,12 +3,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { DatosContext } from "../../context/datosContext";
-import useFetch from "../../hooks/useFetch";
+import SinProyectos from "../atomos/SinProyectos";
 import Card from "../moleculas/Card";
 
 const Cards = ({ cantidad, mostrar = false }) => {
   const { datosPersonales, setDatosPersonales } = useContext(DatosContext);
-  const { data } = useFetch("datos");
   const [projects, setProjects] = useState([]);
 
   // useEffect(() => {
@@ -22,7 +21,6 @@ const Cards = ({ cantidad, mostrar = false }) => {
       setProjects(datosPersonales.projects);
     }
   }, [datosPersonales]);
-
 
   const handleFilter = (e) => {
     const filterValue = e.target.value.toLowerCase();
@@ -47,20 +45,27 @@ const Cards = ({ cantidad, mostrar = false }) => {
         <div></div>
       )}
 
-      <div className="overflow-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
-        {projects
-          .map((item, i) => (
-            <Card
-              key={i}
-              subdomain={item.subdomain}
-              titulo={item.titulo}
-              herramientas={item.categories}
-              descripcion="Descripcion Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta harum quasi tempore alias architecto, sit excepturi nisi quo autem eum, quaerat repellat quia culpa animi. Temporibus, aut? Dicta, quia qui!"
-              url_img="https://i.ytimg.com/vi/4e2VW3Nu-64/maxresdefault.jpg"
-            />
-          ))
-          .reverse()
-          .slice(0, cantidad)}
+      <div className="py-2">
+        {projects.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+            {projects
+              .map((item, i) => (
+                <Card
+                  key={i}
+                  subdomain={item.subdomain}
+                  titulo={item.titulo}
+                  herramientas={item.categories}
+                  descripcion="Descripcion Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta harum quasi tempore alias architecto, sit excepturi nisi quo autem eum, quaerat repellat quia culpa animi. Temporibus, aut? Dicta, quia qui!"
+                  url_img="https://i.ytimg.com/vi/4e2VW3Nu-64/maxresdefault.jpg"
+                  repository={item.repository}
+                />
+              ))
+              .reverse()
+              .slice(0, cantidad)}
+          </div>
+        ) : (
+          <SinProyectos mensaje="Aun no hay Proyectos" />
+        )}
       </div>
     </>
   );

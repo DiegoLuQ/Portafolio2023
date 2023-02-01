@@ -10,7 +10,7 @@ const MainMenu = () => {
                 </Link>
             </li>
             <li className='flex items-center'>
-                <Link to='/projects' className='menu-item '>
+                <Link to='/projects' className='menu-item'>
                     Proyectos
                 </Link>
             </li>

@@ -8,7 +8,7 @@ export const DatosProvider = ({ children }) => {
   const [datosPersonales, setDatosPersonales] = useState();
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API}/datos`)
+    axios.get(`${import.meta.env.VITE_API}/v1/datos`)
     .then((resp) => {
         setDatosPersonales(resp.data);
     });

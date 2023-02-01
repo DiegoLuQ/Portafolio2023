@@ -18,77 +18,61 @@ const Hero = ({ titulo, subtitulo }) => {
       </div>
       <div className="mt-3 mx-2 rounded-md border border-teal-400 py-4 grid grid-cols-3 gap-1 gap-y-4 justify-center">
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg"
+            alt=""
+            width="80px"
+          />
         </div>
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
+            alt=""
+            width="80px"
+          />
         </div>
 
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg"
+            alt=""
+            width="80px"
+          />
         </div>
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg"
+            alt=""
+            width="80px"
+          />
         </div>
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://profilinator.rishav.dev/skills-assets/python-original.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/python-original.svg"
+            alt=""
+            width="80px"
+          />
         </div>
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg"
+            alt=""
+            width="80px"
+          />
         </div>
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg"
+            alt=""
+            width="80px"
+          />
         </div>
         <div className="flex justify-center">
-          <a href="" className="">
-            <img
-              src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
-              alt=""
-              width="80px"
-            />
-          </a>
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+            alt=""
+            width="80px"
+          />
         </div>
       </div>
     </div>

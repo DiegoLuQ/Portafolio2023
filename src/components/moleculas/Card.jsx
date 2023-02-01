@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ titulo, herramientas, descripcion, url_img, subdomain }) => {
+const Card = ({ titulo, herramientas, descripcion, url_img, subdomain, repository }) => {
   return (
-    <div className="p-4 bg-gray-700/50">
+    <div className="p-4 bg-gray-700/50 sm:rounded-md">
       <h2 className="text-blue-600 flex">
         <a href="" className="hover:text-[#00a675]">
           {titulo}
@@ -38,10 +38,11 @@ const Card = ({ titulo, herramientas, descripcion, url_img, subdomain }) => {
         />
       </a>
       <p className="my-4 border rounded-md p-2 text-white">{descripcion}</p>
-      <div className="text-center flex items-center">
+      <div className="text-center flex items-center gap-2">
         <a href="bodega.diego-luque.com" className="btn-cards ">
-          Link
+          Preview
         </a>
+        <a href={repository} target="_blank" className="btn-cards bg-gray-400">Github</a>
       </div>
     </div>
   );

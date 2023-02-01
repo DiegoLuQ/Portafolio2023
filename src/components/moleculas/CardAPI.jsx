@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
@@ -10,9 +9,7 @@ import {
   FaYoutubeSquare,
 } from "react-icons/fa";
 
-import Logo from "../../assets/logo.svg";
 import { DatosContext } from "../../context/datosContext";
-import useFetch from "../../hooks/useFetch";
 const CardAPI = () => {
   const [tecnologies, setTecnologies] = useState([]);
   const {datosPersonales, setDatosPersonales} = useContext(DatosContext)
@@ -23,7 +20,6 @@ const CardAPI = () => {
       }
   }, [datosPersonales]);
 
-  const { data, setDatos } = useFetch("datos");
 
   return (
     <div className="bg-gray-700/50 p-5 m-3 rounded-2xl order-1 md:order-2 shadow-sm shadow-gray-400">

@@ -1,19 +1,21 @@
 import React from "react";
+import { useContext } from "react";
 
 import Logo from "../../assets/logo.svg";
-import useFetch from "../../hooks/useFetch";
+import { DatosContext } from "../../context/datosContext";
 const Description = () => {
 
-  const { data, setDatos } = useFetch("datos");
+  const {datosPersonales, setDatosPersonales} = useContext(DatosContext)
+
 
   return (
     <div className="px-3 sm:w-[500px] order-2 md:order-1 md:mb-0 mb-2 ">
-      <h3 className="text-3xl">{data && data.datos.name}</h3>
+      <h3 className="text-3xl">{datosPersonales && datosPersonales.datos.name}</h3>
       <hr />
       <div className="text-white">
         <div className="relative ">
-          {data ? (
-            data.datos.description
+          {datosPersonales ? (
+            datosPersonales.datos.description
           ) : (
             <div>
               ¡Hola!, soy un programador 2023

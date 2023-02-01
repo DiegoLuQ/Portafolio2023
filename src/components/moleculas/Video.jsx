@@ -11,13 +11,13 @@ const Video = ({ url_video, url_img, titulo, detalle, categories }) => {
     }
   }, [categories]);
   return (
-    <div className="bg-black grid sm:grid-cols-2 items-center">
-      <a href={url_video} className="">
+    <div className="bg-black grid sm:grid-cols-2 rounded-md items-center sm:overflow-hidden">
+      <a href={url_video} className="flex justify-center">
         <img
           src={url_img}
           alt=""
           width="250"
-          className="hidden sm:flex hover:hue-rotate-30 hover:saturate-200"
+          className="sm:flex hover:hue-rotate-30 hover:saturate-200"
         />
       </a>
       <div className="mt-2">

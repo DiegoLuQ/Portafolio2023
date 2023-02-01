@@ -40,6 +40,10 @@ body {
         @apply text-blue-600
     }
 
+    .text-danger {
+        @apply text-red-600
+    }
+
     .btn-cards {
         @apply w-full sm:block hover:bg-[#00a675] font-semibold text-white hover:text-white bg-blue-600 px-6 py-2 rounded-md hover:duration-500
     }
