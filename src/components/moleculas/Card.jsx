@@ -15,7 +15,7 @@ const Card = ({
   return (
     <div className="p-4 bg-gray-700/50 sm:rounded-md">
       <h2 className="text-blue-600 flex">
-        <a href="" className="hover:text-[#00a675]">
+        <a href={url} className="hover:text-[#00a675]">
           {titulo}
         </a>
       </h2>
@@ -61,7 +61,7 @@ const Card = ({
         </div>
       </div>
       <div className="text-center flex items-center gap-2">
-        <a href="bodega.diego-luque.com" className="btn-cards ">
+        <a href={url} className="btn-cards ">
           Preview
         </a>
         <a href={repository} target="_blank" className="btn-cards bg-gray-400">
