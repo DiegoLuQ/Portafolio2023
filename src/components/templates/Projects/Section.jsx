@@ -10,7 +10,7 @@ const Section = ({ children }) => {
   return (
     <div className="mt-3 sm:gap-2 grid grid-cols-3 sm:grid-cols-8 mx-2">
       {/* FILTRACION DE PROYECTOS */}
-      <div className="bg-gradient-to-r to-[#000b1f] from-[#16d4ff29] col-span-3 sm:col-span-1 p-1 sm:rounded-lg">
+      <div className="col-span-3 sm:col-span-1 p-1 sm:rounded-lg">
         <Filtros />
       </div>
       {/* PROYECTOS */}
