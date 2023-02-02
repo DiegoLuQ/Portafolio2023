@@ -5,7 +5,7 @@ import Alerta from "../atomos/Alerta";
 
 const Formulario = () => {
   const [correo, setCorreo] = useState("");
-  const [alerta, setAlerta] = useState({})
+  const [alerta, setAlerta] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,30 +15,29 @@ const Formulario = () => {
       mensaje: correo,
     };
 
-    if([data.email, data.nombre, data.mensaje].includes('')){
+    if ([data.email, data.nombre, data.mensaje].includes("")) {
       setAlerta({
-        msg:"Faltan datos",
-        error:true
-      })
-      return
+        msg: "Faltan datos",
+        error: true,
+      });
+      return;
     }
-
-    console.log(data);
     axios
       .post(`${import.meta.env.VITE_API}/email`, data)
       .then((resp) => {
-        console.log(resp);
-        console.log(resp.data.detail)
         setAlerta({
-          msg:resp.data.detail,
-          error:true
-        })
+          msg: resp.data.detail,
+          error: true,
+        });
+        e.target.email.value = "";
+        e.target.nombre.value = "";
+        setCorreo("");
       })
       .catch((err) => {
         console.log(err);
       });
   };
-  const {msg} = alerta
+  const { msg } = alerta;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -68,7 +67,9 @@ const Formulario = () => {
         ></textarea>
         <div className="flex flex-col items-center sm:flex-row sm:flex sm:justify-between sm:items-center">
           <button className="btn-form ">Enviar</button>
-          <div className="mt-2 sm:mt-0">{msg && <Alerta alerta={alerta} /> }</div>
+          <div className="mt-2 sm:mt-0">
+            {msg && <Alerta alerta={alerta} />}
+          </div>
         </div>
       </div>
     </form>

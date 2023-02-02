@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ titulo, herramientas, descripcion, url_img, subdomain, repository }) => {
+const Card = ({
+  titulo,
+  herramientas,
+  descripcion,
+  url_img,
+  subdomain,
+  repository,
+  url,
+  level,
+  type_bf
+}) => {
   return (
     <div className="p-4 bg-gray-700/50 sm:rounded-md">
       <h2 className="text-blue-600 flex">
@@ -23,7 +33,7 @@ const Card = ({ titulo, herramientas, descripcion, url_img, subdomain, repositor
         </div>
         <div>
           <a
-            href=""
+            href={url}
             className="text-sm italic text-gray-600 hover:text-gray-700"
           >
             {subdomain}
@@ -37,12 +47,26 @@ const Card = ({ titulo, herramientas, descripcion, url_img, subdomain, repositor
           alt={herramientas}
         />
       </a>
-      <p className="my-4 border rounded-md p-2 text-white">{descripcion}</p>
+      <div className="border rounded-md p-2 text-white my-2">
+        <p className="my-2">{descripcion}</p>
+        <div className="">
+          <div className="flex">
+            <label className="font-bold">Level:</label>
+            <label className="ml-2">{level}</label>
+          </div>
+          <div className="flex">
+            <label className="font-bold">Type:</label>
+            <label className="ml-2">{type_bf}</label>
+          </div>
+        </div>
+      </div>
       <div className="text-center flex items-center gap-2">
         <a href="bodega.diego-luque.com" className="btn-cards ">
           Preview
         </a>
-        <a href={repository} target="_blank" className="btn-cards bg-gray-400">Github</a>
+        <a href={repository} target="_blank" className="btn-cards bg-gray-400">
+          Github
+        </a>
       </div>
     </div>
   );

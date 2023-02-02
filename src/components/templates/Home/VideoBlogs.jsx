@@ -11,7 +11,7 @@ const VideoBlogs = () => {
         </h2>
         <Videos cantidad={2}/>
 
-        <div className="absolute w-full h-full bg-gradient-to-t from-[#06ff9749] to-[#01239444] z-[-10] blur-sm"></div>
+        <div className="absolute w-full h-full bg-gradient-to-t from-[#06ff9725] to-[#01239444] z-[-10] blur-sm"></div>
 
       </div>
     </section>

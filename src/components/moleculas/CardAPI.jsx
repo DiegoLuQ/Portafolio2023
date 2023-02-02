@@ -2,14 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import {
-  FaGithubSquare,
-  FaLinkedin,
-  FaInstagramSquare,
-  FaYoutubeSquare,
-} from "react-icons/fa";
+
 
 import { DatosContext } from "../../context/datosContext";
+import Redes_Sociales from "./Redes_Sociales";
 const CardAPI = () => {
   const [tecnologies, setTecnologies] = useState([]);
   const {datosPersonales, setDatosPersonales} = useContext(DatosContext)
@@ -40,7 +36,7 @@ const CardAPI = () => {
             <span className="">Location:</span> {datosPersonales && datosPersonales.location.ciudad},{" "}
             {datosPersonales && datosPersonales.location.pais}
           </div>
-          <div className="mt-1">
+          <div className="mt-1 primary font-semibold">
             <span className="">Role:</span> {datosPersonales && datosPersonales.role}
           </div>
           <div className="mt-1">
@@ -97,30 +93,7 @@ const CardAPI = () => {
           </table>
         </div>
         {/* RRSS */}
-        <div className="font-bold mt-3 flex justify-center">
-          <div className="bg-[#00a675] p-2 rounded-2xl w-[300px]">
-            <div className="flex justify-center my-1 gap-7">
-              <a href={datosPersonales && datosPersonales.rrss.github} target="blank_">
-                <FaGithubSquare
-                  size={32}
-                  className=" hover:text-gray-700/80 hover:duration-300"
-                />
-              </a>
-              <a href={datosPersonales && datosPersonales.rrss.youtube} target="blank_">
-                <FaYoutubeSquare
-                  size={32}
-                  className=" hover:text-gray-700/80 hover:duration-300"
-                />
-              </a>
-              <a href={datosPersonales && datosPersonales.rrss.linkedin} target="blank_">
-                <FaLinkedin
-                  size={32}
-                  className=" hover:text-gray-700/80 hover:duration-300"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+        <Redes_Sociales />
       </div>
     </div>
   );

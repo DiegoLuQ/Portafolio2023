@@ -4,7 +4,6 @@ import Hero from "../templates/Home/Hero";
 import Projects from "../templates/Home/Projects";
 import VideoBlogs from "../templates/Home/VideoBlogs";
 
-
 const Home = () => {
   return (
     <main className="">
@@ -22,8 +21,7 @@ const Home = () => {
         {/* <div>Videos</div>
         <div>Footer</div> */}
       </section>
-      <footer>
-      </footer>
+      
     </main>
   );
 };

@@ -55,9 +55,12 @@ const Cards = ({ cantidad, mostrar = false }) => {
                   subdomain={item.subdomain}
                   titulo={item.titulo}
                   herramientas={item.categories}
-                  descripcion="Descripcion Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta harum quasi tempore alias architecto, sit excepturi nisi quo autem eum, quaerat repellat quia culpa animi. Temporibus, aut? Dicta, quia qui!"
-                  url_img="https://i.ytimg.com/vi/4e2VW3Nu-64/maxresdefault.jpg"
+                  descripcion={item.description}
+                  url_img={item.img}
                   repository={item.repository}
+                  url={item.url}
+                  level={item.level}
+                  type_bf={item.type_back_front}
                 />
               ))
               .reverse()
