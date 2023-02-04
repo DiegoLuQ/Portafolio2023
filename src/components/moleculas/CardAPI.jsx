@@ -3,44 +3,51 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";
 
-
 import { DatosContext } from "../../context/datosContext";
 import Redes_Sociales from "./Redes_Sociales";
 const CardAPI = () => {
   const [tecnologies, setTecnologies] = useState([]);
-  const {datosPersonales, setDatosPersonales} = useContext(DatosContext)
-  
-  useEffect(() => {
-      if(datosPersonales){
-        setTecnologies(datosPersonales.tecnologies);
-      }
-  }, [datosPersonales]);
+  const { datosPersonales, setDatosPersonales, loading } =
+    useContext(DatosContext);
 
+  useEffect(() => {
+    if (datosPersonales) {
+      setTecnologies(datosPersonales.tecnologies);
+    }
+  }, [datosPersonales]);
 
   return (
     <div className="bg-gray-700/50 p-5 m-3 rounded-2xl order-1 md:order-2 shadow-sm shadow-gray-400">
       <div className="text-white text-sm">
         {/* API de mis datos */}
         <div>
-          <div className="font-semibold ">URL: {datosPersonales && datosPersonales.url}</div>
-          <div className="mt-1">
-            <span className="">Username:</span> {datosPersonales && datosPersonales.datos.username}
+          <div className="font-semibold ">
+            URL: {datosPersonales && datosPersonales.url}
           </div>
           <div className="mt-1">
-            <span className="">Age:</span> {datosPersonales && datosPersonales.datos.age}
+            <span className="">Username:</span>{" "}
+            {datosPersonales && datosPersonales.datos.username}
           </div>
           <div className="mt-1">
-            <span className="">Email:</span> {datosPersonales && datosPersonales.datos.email}
+            <span className="">Age:</span>{" "}
+            {datosPersonales && datosPersonales.datos.age}
           </div>
           <div className="mt-1">
-            <span className="">Location:</span> {datosPersonales && datosPersonales.location.ciudad},{" "}
+            <span className="">Email:</span>{" "}
+            {datosPersonales && datosPersonales.datos.email}
+          </div>
+          <div className="mt-1">
+            <span className="">Location:</span>{" "}
+            {datosPersonales && datosPersonales.location.ciudad},{" "}
             {datosPersonales && datosPersonales.location.pais}
           </div>
           <div className="mt-1 primary font-semibold">
-            <span className="">Role:</span> {datosPersonales && datosPersonales.role}
+            <span className="">Role:</span>{" "}
+            {datosPersonales && datosPersonales.role}
           </div>
           <div className="mt-1">
-            <span className="">Level:</span> {datosPersonales && datosPersonales.level}
+            <span className="">Level:</span>{" "}
+            {datosPersonales && datosPersonales.level}
           </div>
         </div>
         {/* Tabla de md lg */}

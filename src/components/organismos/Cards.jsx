@@ -7,7 +7,8 @@ import SinProyectos from "../atomos/SinProyectos";
 import Card from "../moleculas/Card";
 
 const Cards = ({ cantidad, mostrar = false }) => {
-  const { datosPersonales, setDatosPersonales } = useContext(DatosContext);
+  const { datosPersonales, setDatosPersonales, loading } =
+    useContext(DatosContext);
   const [projects, setProjects] = useState([]);
 
   // useEffect(() => {
@@ -44,7 +45,6 @@ const Cards = ({ cantidad, mostrar = false }) => {
       ) : (
         <div></div>
       )}
-
       <div className="py-2">
         {projects.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">

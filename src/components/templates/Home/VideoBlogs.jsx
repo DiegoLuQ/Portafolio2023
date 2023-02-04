@@ -7,7 +7,7 @@ const VideoBlogs = () => {
     <section className="relative my-10">
       <div className="flex flex-col">
         <h2 className="m-auto text-4xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-t from-teal-400 to-[#01a50f] py-2.5">
-          Training
+          Videos
         </h2>
         <Videos cantidad={2}/>
 

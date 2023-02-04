@@ -7,7 +7,8 @@ import SinProyectos from "../atomos/SinProyectos";
 import Video from "../moleculas/Video";
 
 const Videos = ({ cantidad, mostrar = false }) => {
-  const { datosPersonales, setDatosPersonales } = useContext(DatosContext);
+  const { datosPersonales, setDatosPersonales } =
+    useContext(DatosContext);
   const [videosYoutube, setVideosYoutube] = useState([]);
   useEffect(() => {
     if (datosPersonales) {
@@ -38,6 +39,7 @@ const Videos = ({ cantidad, mostrar = false }) => {
       ) : (
         <div></div>
       )}
+
       <div className="p-2">
         {videosYoutube.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-3">
@@ -55,8 +57,9 @@ const Videos = ({ cantidad, mostrar = false }) => {
               .reverse()
               .slice(0, cantidad)}
           </div>
-        ) : (<SinProyectos mensaje="Aun no hay Proyectos" />)
-        }
+        ) : (
+          <SinProyectos mensaje="Aun no hay Videos" />
+        )}
       </div>
     </>
   );

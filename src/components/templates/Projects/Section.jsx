@@ -13,7 +13,7 @@ const Section = ({ children }) => {
       <div className="col-span-3 sm:col-span-1 p-1 sm:rounded-lg">
         <Filtros />
       </div>
-      {/* PROYECTOS */}
+      {/* PROYECTOS y VIDEOS */}
       <div className="bg-gradient-to-r from-[#000b1f] to-[#16d4ff29] px-2 col-span-6 sm:col-span-7 sm:rounded-lg">
         {children ? (
           <Videos mostrar={true} cantidad={cantidad} />

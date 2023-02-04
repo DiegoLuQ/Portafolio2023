@@ -48,7 +48,7 @@ const Card = ({
         />
       </a>
       <div className="border rounded-md p-2 text-white my-2">
-        <p className="my-2">{descripcion}</p>
+        <p className="my-2 h-16 text-center">{descripcion}</p>
         <div className="">
           <div className="flex">
             <label className="font-bold">Level:</label>

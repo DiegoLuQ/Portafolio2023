@@ -11,7 +11,7 @@ const Projects = () => {
       {/* Hero */}
       <Hero
         titulo="Últimos Proyectos"
-        subtitulo="Desdicación y Tiempo"
+        subtitulo="Dedicación y Tiempo"
       />
       <hr className="mt-3 border border-teal-400" />
 
